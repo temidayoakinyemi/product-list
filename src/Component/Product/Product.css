@@ -3,23 +3,13 @@
   padding-top: 100px;
   box-sizing: border-box;
   background-color: #fcf8f6;
-
-  /* Added: flex layout to place product-content and cartresult side by side */
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: nowrap;
 }
 
 .product-content {
-  /* Changed: flex column for product groups, full width minus cart */
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  padding: 0 10%;
-  flex: 1 1 auto;
+  justify-content: space-between;
   align-items: flex-start;
+  padding: 0 10%;
+  flex-wrap: wrap;
 }
 
 .producth1 {
@@ -109,7 +99,7 @@
   background-color: white;
   border-radius: 10px;
   padding: 20px;
-  margin-top: 0; /* removed margin-top to align with product-content */
+  margin-top: 20px;
   box-sizing: border-box;
   max-height: none;
   overflow-y: auto;
@@ -199,6 +189,7 @@
   display: flex;
 }
 
+
 .confirmorderbtn {
   background-color: red;
   color: white;
@@ -227,14 +218,10 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .product {
+  .product-content {
     flex-direction: column;
     align-items: center;
-  }
-
-  .product-content {
     padding: 0 5%;
-    width: 100%;
   }
 
   .first {
@@ -368,7 +355,7 @@
 }
 
 .popup-item-title {
-  margin-top: 20px;
+    margin-top: 20px;
   font-size: 14px;
   color: #260f08;
   margin-bottom: 3px;
